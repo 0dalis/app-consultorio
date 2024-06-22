@@ -1,0 +1,54 @@
+<app-navbar></app-navbar>
+<div class="relative w-full h-[380px] flex justify-center items-center pt-80">
+    <!-- Imágenes del carrusel -->
+    <div *ngFor="let image of images; let i = index" [class.hidden]="currentImage !== i" class="absolute">
+      <img [src]="image" alt="Imagen del carrusel" class="object-cover" style="height: 512px; width:1500px;">
+    </div>
+  
+    <!-- Botón anterior -->
+    <button (click)="previousImage()" class="absolute left-0 z-30 flex items-center justify-center h-full px-4 group focus:outline-none">
+      <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none hover:h-14 hover:w-14 transition-all duration-5000">
+        <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        <span class="sr-only">Anterior</span>
+      </span>
+    </button>
+  
+    <!-- Botón siguiente -->
+    <button (click)="nextImage()" class="absolute right-0 z-30 flex items-center justify-center h-full px-4 group focus:outline-none">
+      <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none hover:h-14 hover:w-14 transition-all duration-5000">
+        <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+        <span class="sr-only">Siguiente</span>
+      </span>
+    </button>
+</div>
+
+<!--SECCIÓN ABOUT-->
+<div class="pt-36 bg-fixed bg-cover bg-center bg-no-repeat" style="background-image:url('assets/img/6.png'); padding-top: 100px; padding-bottom: 100px;">
+  <div class="flex justify-center items-center text-center">
+    <div class="w-1/2 pr-8 pt-16">
+      <img [src]="img" alt="Imagen del carrusel" class="pt-16 pl-40" style="width: 500px;">
+    </div>
+    <div class="w-1/2 text-left pl-8 pt-40">
+      <h2 class="text-lg text-gray-400 mb-12 px-24 pt-40 pr-80">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor odio iusto itaque et quia quod voluptatibus, expedita soluta veniam impedit recusandae earum voluptates id enim praesentium modi commodi laboriosam? Neque?
+      </h2>
+    </div>
+  </div>
+</div>
+
+<div class="gallery">
+  <div class="gallery-container">
+    <img class="gallery-item gallery-item-1" src="" data-index="1">
+    <img class="gallery-item gallery-item-2" src="" data-index="2">
+    <img class="gallery-item gallery-item-3" src="" data-index="3">
+    <img class="gallery-item gallery-item-4" src="" data-index="4">
+    <img class="gallery-item gallery-item-5" src="" data-index="5">
+  </div>
+  <div class="gallery-controls"></div>
+</div>
+<script src="script.js"></script>  
+  
